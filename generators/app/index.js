@@ -62,10 +62,9 @@ module.exports = class extends Generator {
       this.destinationRoot(),
       context
     );
-
   }
 
-  // install() {
-  //   this.installDependencies({ npm: true, bower: false });
-  // }
+  install() {
+    this.installDependencies({ npm: true, bower: false });
+  }
 };

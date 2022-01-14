@@ -1,12 +1,17 @@
 import {
   Col,
   Container,
+  Datatable,
+  DatatableColumn,
   MilestoneWrapper,
   PageHeaderTile,
   Row,
   UiElement,
 } from '@earnkeeper/ekp-ui';
-import { HELLO_WORLD_MILESTONES, HELLO_WORLD_DOCUMENT } from '../util/collectionNames';
+import {
+  HELLO_WORLD_MILESTONES,
+  HELLO_WORLD_DOCUMENT,
+} from '../util/collectionNames';
 
 export default function element(): UiElement {
   return Container({

@@ -15,7 +15,7 @@ import { HELLO_WORLD_QUEUE } from '../util/queue.names';
 import { HelloWorldDocument } from './hello-world.document';
 
 @Processor(HELLO_WORLD_QUEUE)
-export class PricesProcessor extends AbstractProcessor<Context> {
+export class HelloWorldProcessor extends AbstractProcessor<Context> {
   constructor() {
     super();
   }
@@ -23,7 +23,6 @@ export class PricesProcessor extends AbstractProcessor<Context> {
   pipe(source: Observable<BaseContext>): Observable<BaseContext> {
     return source.pipe(
       this.emitMilestones(),
-      this.delay(),
       this.mapDocuments(),
       this.emitDocuments(),
       this.removeMilestones(),
@@ -35,7 +34,7 @@ export class PricesProcessor extends AbstractProcessor<Context> {
       HELLO_WORLD_MILESTONES,
       context => !context.documents?.length,
       {
-        items: context => context.nftOwners,
+        items: context => context.documents,
         progressing: () => 'Generating hellow world table',
         complete: records => `Table generated with ${records.length} records`,
       },
@@ -43,11 +42,12 @@ export class PricesProcessor extends AbstractProcessor<Context> {
   }
 
   private mapDocuments() {
-    return Rx.map(async (context: Context) => {
+    return Rx.map((context: Context) => {
       return {
         ...context,
         documents: [
           {
+            id: 'hello-world-1',
             name: 'Hello',
             value: 'World',
           },
