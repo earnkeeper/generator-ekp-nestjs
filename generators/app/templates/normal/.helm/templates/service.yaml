@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: <%= pluginId %>
+spec:
+  selector:
+    app: <%= pluginId %>
+  ports:
+  - name: http
+    port: 3001
+    protocol: TCP

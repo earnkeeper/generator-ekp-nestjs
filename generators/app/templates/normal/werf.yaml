@@ -1,0 +1,6 @@
+configVersion: 1
+project: ekp
+---
+image: <%= pluginId %>
+dockerfile: Dockerfile
+context: .

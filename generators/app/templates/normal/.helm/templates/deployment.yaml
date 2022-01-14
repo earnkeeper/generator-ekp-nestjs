@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <%= pluginId %>
+spec:
+  selector:
+    matchLabels:
+      app: <%= pluginId %>
+  revisionHistoryLimit: 3
+  strategy:
+    type: RollingUpdate
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: <%= pluginId %>
+    spec:
+      containers:
+        - name: <%= pluginId %>
+          image: '{{ .Values.werf.image.<%= pluginId %> }}'
+          workingDir: /app
+          env:
+            - name: EKP_PLUGIN_ID
+              value: '<%= pluginId %>'
+            - name: EKP_PLUGIN_NAME
+              value: '<%= pluginName %>'
+            - name: MORALIS_APP_ID
+              value: '{{ .Values.moralis.appId }}'
+            - name: MORALIS_SERVER_URL
+              value: '{{ .Values.moralis.serverUrl }}'
+            - name: REDIS_HOST
+              value: 'ekp-redis-master'
+          ports:
+            - containerPort: 3001
+              protocol: TCP
