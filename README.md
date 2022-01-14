@@ -7,21 +7,14 @@ First, install [Yeoman](http://yeoman.io) and generator-earnkeeper-plugin-nestjs
 
 ```bash
 npm install -g yo
-npm install -g generator-earnkeeper-plugin-nestjs
+npm install -g generator-ekp-nestjs
 ```
 
 Then generate your new project:
 
 ```bash
-yo earnkeeper-plugin-nestjs
+yo ekp-nestjs
 ```
-
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
 
 ## License
 

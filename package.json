@@ -1,5 +1,5 @@
 {
-  "name": "generator-earnkeeper-plugin-nestjs",
+  "name": "generator-ekp-nestjs",
   "version": "0.1.0",
   "description": "Yeoman generator for a NestJs EarnKeeper.io plugin",
   "homepage": "https://github.com/earnkeeper/generator-ekp-nestjs",
@@ -12,7 +12,6 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
     "yeoman-generator"
   ],
   "devDependencies": {
