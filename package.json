@@ -2,7 +2,7 @@
   "name": "generator-earnkeeper-plugin-nestjs",
   "version": "0.1.0",
   "description": "Yeoman generator for a NestJs EarnKeeper.io plugin",
-  "homepage": "https://github.com/earnkeeper/generator-earnkeeper-plugin-nestjs",
+  "homepage": "https://github.com/earnkeeper/generator-ekp-nestjs",
   "author": {
     "name": "Gavin Shaw",
     "email": "gavin@earnkeeper.io"
@@ -73,6 +73,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "earnkeeper/generator-earnkeeper-plugin-nestjs",
+  "repository": "earnkeeper/generator-ekp-nestjs",
   "license": "GPL-3.0"
 }
