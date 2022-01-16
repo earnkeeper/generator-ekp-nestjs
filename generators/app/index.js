@@ -46,20 +46,16 @@ module.exports = class extends Generator {
     };
 
     this.fs.copyTpl(
-      this.templatePath("normal/**/*"),
+      this.templatePath("root/**/*"),
       this.destinationRoot(),
-      context
+      context,
+      {},
+      { globOptions: { dot: true } }
     );
 
     this.fs.copyTpl(
-      this.templatePath("normal/.*"),
-      this.destinationRoot(),
-      context
-    );
-
-    this.fs.copyTpl(
-      this.templatePath("special/.*"),
-      this.destinationRoot(),
+      this.templatePath("gitignore"),
+      this.destinationPath(".gitignore"),
       context
     );
   }
