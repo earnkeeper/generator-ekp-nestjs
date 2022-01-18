@@ -1,12 +1,12 @@
 moralis:
-  serverUrl: TODO: add your moralis details here
-  appId: TODO: add your moralis details here
+  serverUrl:
+  appId:
 redis:
-  user: TODO: add your redis credentials here
-  password: TODO: add your redis credentials here
+  user:
+  password:
 issuer:
-  email: TODO: add the email address to attach to your HTTPS cert here
+  email:
 ingress:
-  hostname: TODO: add your root hostname here
+  hostname:
 opensea:
   apiKey:
