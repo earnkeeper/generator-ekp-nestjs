@@ -14,5 +14,6 @@ describe("ekp-nestjst:app", () => {
     assert.file([".helm/values.yaml"]);
     assert.file([".gitignore"]);
     assert.file([".env"]);
+    assert.file([".github/workflows/werf-converge.yaml"]);
   });
 });

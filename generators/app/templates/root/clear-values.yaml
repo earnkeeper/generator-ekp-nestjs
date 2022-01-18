@@ -8,3 +8,5 @@ issuer:
   email: TODO: add the email address to attach to your HTTPS cert here
 ingress:
   hostname: TODO: add your root hostname here
+opensea:
+  apiKey:
