@@ -3,11 +3,11 @@ import {
   Container,
   Datatable,
   DatatableColumn,
-  documents,
   PageHeaderTile,
   Row,
   UiElement,
 } from '@earnkeeper/ekp-ui';
+import { documents } from '@earnkeeper/ekp-sdk-nestjs';
 import { HelloWorldDocument } from './hello-world.document';
 
 export default function element(): UiElement {
