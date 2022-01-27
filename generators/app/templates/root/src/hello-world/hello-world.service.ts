@@ -12,7 +12,7 @@ import moment from 'moment';
 import { filter } from 'rxjs';
 import { HelloWorldDocument } from './hello-world.document';
 
-const FILTER_PATH = '/plugin/<%= pluginId =>/hello-world';
+const FILTER_PATH = '/plugin/<%= pluginId %>/hello-world';
 const COLLECTION_NAME = collection(HelloWorldDocument);
 
 @Injectable()
