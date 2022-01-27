@@ -1,6 +1,10 @@
-import { DocumentDto } from '@earnkeeper/ekp-sdk-nestjs';
+import { EkDocument } from '@earnkeeper/ekp-sdk-nestjs';
 
-export interface HelloWorldDocument extends DocumentDto {
+export class HelloWorldDocument extends EkDocument {
+  constructor(properties: HelloWorldDocument) {
+    super(properties);
+  }
+
   readonly name: string;
   readonly value: string;
 }

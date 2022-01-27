@@ -3,15 +3,12 @@ import {
   Container,
   Datatable,
   DatatableColumn,
-  MilestoneWrapper,
+  documents,
   PageHeaderTile,
   Row,
   UiElement,
 } from '@earnkeeper/ekp-ui';
-import {
-  HELLO_WORLD_MILESTONES,
-  HELLO_WORLD_DOCUMENT,
-} from '../util/collectionNames';
+import { HelloWorldDocument } from './hello-world.document';
 
 export default function element(): UiElement {
   return Container({
@@ -28,10 +25,7 @@ export default function element(): UiElement {
           }),
         ],
       }),
-      MilestoneWrapper({
-        milestones: `$.${HELLO_WORLD_MILESTONES}`,
-        child: tableRow(),
-      }),
+      tableRow(),
     ],
   });
 }
@@ -43,7 +37,7 @@ function tableRow(): UiElement {
         children: [
           Datatable({
             columns: tableColumns(),
-            data: `$.${HELLO_WORLD_DOCUMENT}.*`,
+            data: documents(HelloWorldDocument),
             defaultSortAsc: true,
             defaultSortFieldId: 'expiresIn',
             filterable: false,
